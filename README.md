@@ -43,7 +43,7 @@ To get the code..
     ```
 2. Move to the folder and install requirements
   ```bash
-  cd pitchblog
+  cd pitch_blog
   pip install -r requirements.txt
   ```
 3. Exporting Configurations
