@@ -7,7 +7,7 @@ class CommentTest(unittest.TestCase):
     def setUp(self):
 
         self.new_comment = Comment(
-            id=1, comment='Test comment', user=self.user_essy, pitch_id=self.new_pitch)
+            id=1, comment='Test comment', user=self.user_midumbi, pitch_id=self.new_pitch)
 
     def tearDown(self):
         Pitch.query.delete()
@@ -15,18 +15,18 @@ class CommentTest(unittest.TestCase):
 
     def test_check_instance_variables(self):
         self.assertEquals(self.new_comment.comment, 'Test comment')
-        self.assertEquals(self.new_comment.user, self.user_essy)
+        self.assertEquals(self.new_comment.user, self.user_midumbi)
         self.assertEquals(self.new_comment.pitch_id, self.new_pitch)
 
 
 class CommentTest(unittest.TestCase):
     def setUp(self):
-        self.user_essy = User(
+        self.user_midumbi = User(
             username='midumbi', password='midumbi', email='midumbi.webdev@gmail.com')
         self.new_pitch = Pitch(
-            id=1, title='Test', content='This is a test pitch', user_id=self.user_essy.id)
+            id=1, title='Test', content='This is a test pitch', user_id=self.user_midumbi.id)
         self.new_comment = Comment(
-            id=1, comment='This is a test comment', user_id=self.user_essy.id, pitch_id=self.new_pitch.id)
+            id=1, comment='This is a test comment', user_id=self.user_midumbi.id, pitch_id=self.new_pitch.id)
 
     def tearDown(self):
         Pitch.query.delete()

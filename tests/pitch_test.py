@@ -5,10 +5,10 @@ from app import db
 
 class BlogModelTest(unittest.TestCase):
     def setUp(self):
-        self.user_essy = User(
+        self.user_midumbi = User(
             username='midumbi', password='midumbi', email='midumbi.webdev@gmail.com')
         self.new_pitch = Pitch(
-            id=1, title='Test', content='This is a test pitch', user_id=self.user_essy.id)
+            id=1, title='Test', content='This is a test pitch', user_id=self.user_midumbi.id)
 
     def tearDown(self):
         Pitch.query.delete()
@@ -17,7 +17,7 @@ class BlogModelTest(unittest.TestCase):
     def test_check_instance_variables(self):
         self.assertEquals(self.new_pitch.title, 'Test')
         self.assertEquals(self.new_pitch.content, 'This is a test pitch')
-        self.assertEquals(self.new_pitch.user_id, self.user_essy.id)
+        self.assertEquals(self.new_pitch.user_id, self.user_midumbi.id)
 
     def test_save_pitch(self):
         self.new_pitch.save()
