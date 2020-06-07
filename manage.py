@@ -11,6 +11,9 @@ migrate = Migrate(app,db)
 manager.add_command('db',MigrateCommand)
 manager.add_command('server', Server)
 
+SECRET_KEY = os.urandom(32)
+app.config['SECRET_KEY'] = SECRET_KEY
+
 
 @manager.shell
 def make_shell_context():
