@@ -1,22 +1,22 @@
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark ">
-    <a class="navbar-brand" href="{{url_for('main.index')}}"><strong>Pich-Blog</strong> </a>
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark"style="background-color: rgba(64, 119, 136, 0.9);">
+    <a class="navbar-brand" href="{{url_for('main.index')}}"><strong>Pitch-Blog</strong> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="{{url_for('main.index')}}">All Pitches</a>
+                  <a class="nav-link" href="{{url_for('main.index')}}">1 Minute Pitches</a>
                 </li>
                 {% if current_user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('main.new_pitch')}}">New Pitch</a>
+                    <a class="nav-link" href="{{url_for('main.new_pitch')}}">Create A 1 Minute Pitch</a>
                 </li>
                 {% endif %}
             </ul>
         <ul class="navbar-nav ml-auto">
             {% if current_user.is_authenticated %}
-
+  
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" style= 'margin-right:30px' data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -34,7 +34,8 @@
                     <a style= 'margin-right:30px' class="nav-link" href="{{url_for('auth.signup')}}"><i class="fas fa-user-plus"></i></i>&nbsp; <strong>Sign Up</strong></a>
                 </li>
             {%endif%}
-
+  
         </ul>
+       
     </div>
-</nav>
+  </nav>
