@@ -15,3 +15,9 @@ class UserTest(unittest.TestCase):
 
     def test_password_verification(self):
         self.assertTrue(self.new_user.verify_password('midumbi'))
+
+    def tearDown(self):
+        Pitch.query.delete()
+        User.query.delete()
+        Comment.query.delete()
+    
