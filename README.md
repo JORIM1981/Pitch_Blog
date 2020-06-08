@@ -8,7 +8,7 @@
 ## Description
 This  is a flask application that allows users to post one minute pitches and also allows other users who have signed up to comment and upvote or downvote a pitch. A user must signup to be able to access the functionalities of the application.
 
-You can view the site at:[Heroku](https://nuntium-fractionis.herokuapp.com/)
+You can view the site at:[Heroku](https://jorim-pitch.herokuapp.com/)
 
 ## User Stories
 These are the behaviours/features that the application implements depending on the selection made by a user.
