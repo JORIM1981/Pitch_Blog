@@ -24,7 +24,6 @@ body{
   }
   
   
-  
   .division {
       align-items: center;
       flex-direction: column;
@@ -75,8 +74,8 @@ body{
     text-decoration: none;
   }
   
-  .container{
-  background-image:url('../photos/blog_bg.jpeg');
+  .bgimage{
+  background-image:url('https://bit.ly/2QOpC4L');
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
